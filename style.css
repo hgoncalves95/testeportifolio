@@ -140,57 +140,68 @@ nav {
 
 .experience {
     padding: 80px 20px;
-    background: #0f0f1a;
+    background: #0b0b14;
 }
 
 .experience h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.4rem;
+    margin-bottom: 50px;
 }
 
-.experience-intro {
-    max-width: 800px;
-    margin: 0 auto 50px;
-    text-align: center;
-    font-size: 1.1rem;
-    color: #cfcfe6;
-}
-
-.experience-grid {
+.experience-content {
+    max-width: 900px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-.experience-card {
-    background: #16162a;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.experience-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d6d6f0;
 }
 
-.experience-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(255, 77, 166, 0.3);
-}
-
-.experience-card h3 {
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    color: #ff4da6;
-}
-
-.experience-card ul {
+.experience-list ul {
     list-style: none;
     padding: 0;
 }
 
-.experience-card li {
+.experience-list li {
     margin-bottom: 12px;
-    line-height: 1.6;
-    color: #e0e0f5;
+    color: #eaeafc;
+    position: relative;
+    padding-left: 18px;
+}
+
+.experience-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff4da6;
+}
+
+.experience-companies {
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #bdbdd9;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .experience-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .experience-list li {
+        padding-left: 0;
+    }
+
+    .experience-list li::before {
+        display: none;
+    }
 }
 
 
@@ -411,4 +422,5 @@ footer {
     box-shadow: 
         0 0 12px rgba(255, 77, 141, 0.35);
 }
+
 
